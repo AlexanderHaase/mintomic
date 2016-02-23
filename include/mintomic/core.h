@@ -3,7 +3,6 @@
 
 #include "platform_detect.h"
 
-
 #if MINT_HAS_STDINT
     #include <stdint.h>
 #else

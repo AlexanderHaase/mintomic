@@ -5,7 +5,9 @@
 #if defined(_WIN32)
     // MSVC compiler family
     #define MINT_COMPILER_MSVC 1
-    #if _MSC_VER >= 1600
+	#ifdef MINT_TARGET_KERNEL
+
+    #else if _MSC_VER >= 1600
         // <stdint.h> is only available in VS2010 and later
         #define MINT_HAS_STDINT 1
     #endif
