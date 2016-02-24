@@ -3,6 +3,9 @@
 
 #if MINT_TARGET_XBOX_360    // Xbox 360
     #include <xtl.h>
+#elif MINT_TARGET_KERNEL	// Windows kernel devel
+	#include <ntddk.h>
+    #include <intrin.h>
 #else                       // Windows
     #ifndef WIN32_LEAN_AND_MEAN
         #define WIN32_LEAN_AND_MEAN
