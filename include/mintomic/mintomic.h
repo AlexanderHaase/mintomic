@@ -88,7 +88,7 @@ extern "C" {
     {
         mint_store_64_relaxed( object, value );
     }
-    MINT_C_INLINE size_t mint_exchange_relaxed( mint_atomic_t * object, (size_t)desired )
+    MINT_C_INLINE size_t mint_exchange_relaxed( mint_atomic_t * object, size_t desired )
     {
         return mint_exchange_64_relaxed( (mint_atomic64_t*)object, desired );
     }
