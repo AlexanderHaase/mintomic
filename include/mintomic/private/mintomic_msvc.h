@@ -204,6 +204,22 @@ MINT_C_INLINE uint64_t mint_fetch_or_64_relaxed(mint_atomic64_t *object, uint64_
 }
 
 
+//----------------------------------------------
+// byteswap operations
+//----------------------------------------------
+static MINT_C_INLINE uint16_t bswap16( const uint16_t value )
+{
+	return _byteswap_ushort( value );
+}
+static MINT_C_INLINE uint32_t bswap32( const uint32_t value )
+{
+	return _byteswap_ulong( value );
+}
+static MINT_C_INLINE uint64_t bswap64( const uint64_t value )
+{
+	return _byteswap_uint64( value );
+}
+
 #ifdef __cplusplus
 } // extern "C"
 #endif
